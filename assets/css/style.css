@@ -3,13 +3,59 @@
     margin: 0;
     padding: 0;
     font-family: 'Work Sans', sans-serif;
+    color: #ebccc2;
+    background-color: #2e2e2e;
 }
 /* nav left and top overlaps */
 nav ul{
     list-style: none;
 }
+h1{
+    width: 40%;
+    margin-bottom: 10%;
+    font-size: 2.5rem;
+    font-weight: 300;
+}
+h2{
+    font-size: 1.8rem;
+    font-weight: 400;
+    margin-bottom: 5%;
+}
+p{
+    font-size: 1rem;
+    font-weight: 100;
+    word-spacing: .1rem;
+}
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#about>img{
+    width: 90vw;
 
-
+}
+#about section{
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+#about section div{
+    width: 45%;
+    margin: 5%;
+}
+#about section div img{
+    height: 25vh;
+}
+#about section article{
+    margin: 5%;
+    width: 45%;
+    padding-top: 5%;
+}
+#lounger section{
+    background: url("../img/section-voyager.jpg") center no-repeat;
+    width: 60vw;
+}
 /*
 Mute button, maybe later
 .vid-background {

@@ -22,9 +22,11 @@ h2{
     margin-bottom: 5%;
 }
 p{
-    font-size: 1rem;
-    font-weight: 100;
-    word-spacing: .1rem;
+    font-size: .8rem;
+    font-weight: 200;
+    word-spacing: .2rem;
+    color: #fff;
+    line-height: 1.2rem;
 }
 #about{
     display: flex;
@@ -52,9 +54,25 @@ p{
     width: 45%;
     padding-top: 5%;
 }
+#lounger, #experience{
+    display: flex;
+}
 #lounger section{
     background: url("../img/section-voyager.jpg") center no-repeat;
     width: 60vw;
+    height: 100vh;
+}
+#experience section{
+    background: url("../img/section-experience-1.jpg") center no-repeat;
+    width: 60vw;
+    height: 100vh;
+}
+#lounger article, #experience article{
+    width: 40vw;
+    padding:10% 5%;
+}
+#lounger article h2, #experience article h2{
+    padding-bottom: 10%;
 }
 /*
 Mute button, maybe later

@@ -1,79 +1,297 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 * {
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: 'Work Sans', sans-serif;
     color: #ebccc2;
     background-color: #2e2e2e;
+    overflow: auto;
 }
-/* nav left and top overlaps */
-nav ul{
+
+nav ul {
     list-style: none;
 }
-h1{
+
+h1 {
     width: 40%;
     margin-bottom: 10%;
     font-size: 2.5rem;
     font-weight: 300;
+    margin-top: 10vw;
 }
-h2{
+
+h2 {
     font-size: 1.8rem;
     font-weight: 400;
     margin-bottom: 5%;
 }
-p{
-    font-size: .8rem;
-    font-weight: 200;
+
+h3{
+    font-weight: 300;
+    margin-bottom: 2%;
+}
+
+p {
+    font-size: .9rem;
+    font-weight: 400;
     word-spacing: .2rem;
-    color: #fff;
+    color: rgb(115, 115, 115);
     line-height: 1.2rem;
 }
-#about{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-#about>img{
-    width: 90vw;
 
+a{
+    font-size: .8rem;
+    font-weight: 300;
+    text-decoration: none;
 }
-#about section{
+
+main {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    margin: 5%;
+    width: 100%;
 }
-#about section div{
-    width: 45%;
-    margin: 5%;
-}
-#about section div img{
-    height: 25vh;
-}
-#about section article{
-    margin: 5%;
-    width: 45%;
-    padding-top: 5%;
-}
-#lounger, #experience{
+
+#navTop {
+    position: fixed;
+    top: 0;
+    width: 95vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 2% 3%;
+    z-index: 8;
+    opacity: .66;
 }
-#lounger section{
+
+#navTop div {
+    width: 45%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+}
+
+#navTop div ul {
+    width: 30%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+#navTop div a {
+    color: rgb(234, 204, 194);
+}
+#navTop div a:hover{
+    text-decoration: underline;
+}
+
+
+#navLeft {
+    width: 15vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    z-index: 9;
+    opacity: .66;
+}
+
+#navLeft ul li:not(#navLeft ul li:last-of-type){
+    margin-bottom: 8vh;
+    margin-left: 2vw;
+}
+#navLeft ul li:last-of-type{
+    margin-left: 2vw;
+}
+#navLeft a{
+    color: #fff;
+    font-size: .9rem;
+}
+#navLeft a:hover{
+    font-weight: 600;
+}
+
+#navLeft #targetPage a{
+    font-weight: 600;
+    opacity: 1;
+}
+
+#about {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+
+#about>img {
+    width: 90vw;
+}
+
+#about section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    /* margin: 5%; */
+}
+
+#about section div img {
+    width: 30vw;
+    margin: 10vw 0 5vw 10vw;
+}
+
+#about section article {
+    margin-top: 10vw;
+    width: 40vw;
+    padding: 5%;
+}
+
+#lounger section {
     background: url("../img/section-voyager.jpg") center no-repeat;
     width: 60vw;
     height: 100vh;
 }
-#experience section{
+
+#experience section {
     background: url("../img/section-experience-1.jpg") center no-repeat;
     width: 60vw;
     height: 100vh;
 }
-#lounger article, #experience article{
+
+#lounger article, #experience article {
     width: 40vw;
-    padding:10% 5%;
+    padding: 10% 5%;
 }
-#lounger article h2, #experience article h2{
+
+#lounger article h2, #experience article h2 {
     padding-bottom: 10%;
 }
+
+#inspiration{
+    width: unset;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 10% 15%;
+}
+#player{
+    width: 95%;
+}
+#inspiration>article{
+    -ms-flex-item-align: start;
+        align-self: flex-start;
+    width: 50%;
+    margin: 10% 0;
+}
+#inspiration article div{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+        align-content: center;
+}
+#inspiration article div p{
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 1% 2.5%;
+    margin-right: 2%;
+}
+#inspiration article>p{
+    margin-top: 2%;
+}
+#bottom-Content{
+    margin-bottom: 5vw;
+}
+#bottom-Content div{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+}
+#bottom-Content div article {
+    width: 30vw;
+    padding: 5vw 2.5vw;
+}
+#alchemy, #architecture{
+    width: 35vw;
+    height: 60vh;
+}
+#alchemy{
+    background: url("../img/ETC_6.webp") center/cover no-repeat;
+}
+#architecture{
+    background: url("../img/ETC_5.webp") center/cover no-repeat;
+}
+#shop section{
+    height: 100vh;
+    width: 55vw;
+    background: url("../img/section-composition4.jpg") center/cover no-repeat;    
+}
+#shop article{
+    width: 45vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align:  center;
+        -ms-flex-align:  center;
+            align-items:  center;
+}
+#shop article img{
+    width: 60%;
+    margin-top: 10%;
+}
+#shop article a{
+    margin-top: 1%;
+    padding: 1% 3%;
+    color: #2e2e2e;
+    background-color: rgb(234, 204, 194);
+    text-decoration: none;
+    border: none;
+}
+
+
+
+
 /*
 Mute button, maybe later
 .vid-background {
@@ -109,4 +327,3 @@ video {
     background-size: cover;
 }
 */
-
